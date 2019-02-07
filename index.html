@@ -52,7 +52,7 @@ body {
 {
   position: absolute;
   display: block;
-  margin-left: -100px;
+  
 	top: 2em;
   
   width: 60%;
@@ -62,18 +62,21 @@ body {
 	animation-duration: 10s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
+
+  text-align: center;
+
 }
 
 #welcome {
 position: relative;
 }
-#image {
-  content:url(https://i.imgur.com/4o7B6SZ.jpg);
+#image 
+{
+  
   width: 250px;
   border-radius: 50%;
-  
-   border:5px solid rgb(95, 95, 95);
- 
+  border:5px solid rgb(95, 95, 95);
+
 
   
 
@@ -83,27 +86,23 @@ position: relative;
   content:url(https://i.imgur.com/GBWNetE.gif);
   width: 50px;
 
-  overflow:hidden;
   border-radius: 50%;
   margin-right:10px;
   
 }
 
-#image3 {
-  content:url(https://i.imgur.com/68Jpw0b.jpg);
+#image3 
+{
+  
   width: 250px;
   border-radius: 50%;
-  
-   border:5px solid rgb(95, 95, 95);
+  border:5px solid rgb(95, 95, 95);
 
 
 }
 
 .item-1{
 	animation-name: anim-1;
-	text-align: center;
-	margin-top: 0px;
-
 
 }
 .nav-link:hover
@@ -112,8 +111,7 @@ position: relative;
 }
 .item-2{
 	animation-name: anim-2;
-	text-align: center;
-	margin-top: 0px;
+
 
 }
 
@@ -140,13 +138,13 @@ position: relative;
 
 @keyframes anim-1 {
 	0%, 20% { left: -100%; opacity: 0; }
-  20%,40% { left: 25%; opacity: 1; }
+  20%,40% { left: 20%; opacity: 1; }
   50%, 100% { left: 110%; opacity: 0; }
 }
 
 @keyframes anim-2 {
 	0%, 50% { left: -100%; opacity: 0; }
-    74.96%, 91.62% { left: 25%; opacity: 1; }
+    74.96%, 91.62% { left: 20%; opacity: 1; }
     100% { left: 110%; opacity: 0; }
 }
 
@@ -298,11 +296,11 @@ position: relative;
   </div>
 </nav>
 <div id ="welcome">
-        <p class="item-1" style="color:rgb(248, 248, 248)" ><img  id = "image"  ><br>Welcome!<br> I'm Juan Munoz.</p>
+        <p class="item-1" style="color:rgb(248, 248, 248)" ><img src="https://i.imgur.com/4o7B6SZ.jpg"  id = "image" class="img-fluid" alt="Responsive image" ><br>Welcome!<br> I'm Juan Munoz.</p>
         
         <div class="square"></div>
         
-        <p class="item-2" style="color:rgb(248, 248, 248)">I am a computer science engineering student <img  id = "image3"  ></p> 
+        <p class="item-2" style="color:rgb(248, 248, 248)">I am a computer science engineering student <img src= "https://i.imgur.com/68Jpw0b.jpg"  id = "image3" class="img-fluid" alt="Responsive image2" ></p> 
 </div>
        
 
