@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-
 <html>
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 <head>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -17,28 +17,32 @@
 
 html {
   scroll-behavior: smooth;
-  max-width: 100%;
+  
   position: relative;
-  overflow-x: hidden;
+  
+
+  width: 100% !important;
+  overflow-x: hidden !important;
 }
 .navbar  {
   
 	background-color: black;
 	
 }
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
 body {
   height: 100%;
-  width: 100%;
-  overflow-x: hidden;
- background-color: black;
- font-family: 'Open Sans', 'sans-serif';
+  width: 100% !important;
+  overflow-x: hidden !important;
+  
+  background-color: black;
+
   color: #cecece;
-  margin: 0;
-    padding: 0;
-  overflow: auto;
+  
+  
+
   position: relative;
-  background-attachment: fixed;
+  
   font-family: 'Montserrat';
 
 }
@@ -46,15 +50,16 @@ body {
 .item-1, 
 .item-2  
 {
-	position: absolute;
+  position: absolute;
   display: block;
+  margin-left: -100px;
 	top: 2em;
   
   width: 60%;
   
   font-size: 2em;
 
-	animation-duration: 17s;
+	animation-duration: 10s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 }
@@ -68,6 +73,8 @@ position: relative;
   border-radius: 50%;
   
    border:5px solid rgb(95, 95, 95);
+ 
+
   
 
 }
@@ -80,18 +87,15 @@ position: relative;
   border-radius: 50%;
   margin-right:10px;
   
-
-  
-
 }
 
 #image3 {
-  content:url(https://i.imgur.com/4o7B6SZ.jpg);
+  content:url(https://i.imgur.com/68Jpw0b.jpg);
   width: 250px;
   border-radius: 50%;
   
    border:5px solid rgb(95, 95, 95);
-  
+
 
 }
 
@@ -110,6 +114,7 @@ position: relative;
 	animation-name: anim-2;
 	text-align: center;
 	margin-top: 0px;
+
 }
 
 .header {
@@ -129,25 +134,22 @@ position: relative;
 
 .progress-bar {
   height: 8px;
-  background: #4caf50;
+  background: #347dd1;
   width: 0%;
 }
 
 @keyframes anim-1 {
-	0%, 8.3% { left: -100%; opacity: 0; }
-  8.3%,25% { left: 18%; opacity: 1; }
-  33.33%, 100% { left: 110%; opacity: 0; }
+	0%, 20% { left: -100%; opacity: 0; }
+  20%,40% { left: 25%; opacity: 1; }
+  50%, 100% { left: 110%; opacity: 0; }
 }
 
 @keyframes anim-2 {
-	0%, 33.33% { left: -100%; opacity: 0; }
-  41.63%, 58.29% { left: 25%; opacity: 1; }
-  66.66%, 100% { left: 110%; opacity: 0; }
+	0%, 50% { left: -100%; opacity: 0; }
+    74.96%, 91.62% { left: 25%; opacity: 1; }
+    100% { left: 110%; opacity: 0; }
 }
 
-#imagen{
-margin-top: -100px;
-}
 
 .square {
   height: 500px;
@@ -161,7 +163,7 @@ margin-top: -100px;
 
 #home
 {
-  margin-top: 1000px;
+  margin-top: 800px;
 }
 #exp
 {
@@ -261,11 +263,9 @@ margin-top: -100px;
 }
 
 </style>
-
 </head>
 <body>
-
-    <div class="header">
+<div class="header">
         
         <div class="progress-container">
           <div class="progress-bar" id="myBar"></div>
@@ -297,17 +297,19 @@ margin-top: -100px;
 
   </div>
 </nav>
-
 <div id ="welcome">
-<p class="item-1" style="color:rgb(248, 248, 248)"><img  id = "image" align="middle" ><br>Welcome!<br> I'm Juan Munoz.</p>
-
-<div class="square"></div>
-
-<p class="item-2" style="color:rgb(248, 248, 248)">I am a computer science engineering student <img  id = "image" align="middle" ></p> 
+        <p class="item-1" style="color:rgb(248, 248, 248)" ><img  id = "image"  ><br>Welcome!<br> I'm Juan Munoz.</p>
+        
+        <div class="square"></div>
+        
+        <p class="item-2" style="color:rgb(248, 248, 248)">I am a computer science engineering student <img  id = "image3"  ></p> 
 </div>
+       
 
 </div>
 <div id="home">
+
+
 
 </div>
 <div id="exp" >
@@ -382,30 +384,17 @@ margin-top: -100px;
 
 </div>
 
-
-<div id="exp" >
-
-
-</div>
-
-
-<div id="curious" >
-
-</div>
-
 <script>
-$(function() {
-
-var $body = $(document);
-$body.bind('scroll', function() {
-    // "Disable" the horizontal scroll.
-    if ($body.scrollLeft() !== 0) {
-        $body.scrollLeft(0);
-    }
-});
-
-}); 
-</script>
-
+        
+        window.onscroll = function() {myFunction()};
+        
+        function myFunction() {
+          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var scrolled = (winScroll / height) * 100;
+          document.getElementById("myBar").style.width = scrolled + "%";
+        }
+        </script>
+        
 </body>
 </html>
