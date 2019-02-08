@@ -35,7 +35,7 @@ body {
 
   color: #cecece;
   
-  
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 
   position: relative;
   
@@ -146,8 +146,8 @@ position: relative;
 
 
 .square {
-  height: 500px;
-  width: 500px;
+  width: 50vw;
+  height: 50vw;
   transform: rotate(20deg);
   position: fixed;
   z-index: -20;
@@ -155,13 +155,15 @@ position: relative;
   border: 2px solid rgb(43, 43, 43);
 }
 
+
+
 #home
 {
-  margin-top: 800px;
+  margin-top: 1000px;
 }
 #exp
 {
-  margin-top: 2000px;
+  margin-top: 500px;
 }
 .circular-chart {
   
@@ -235,7 +237,7 @@ position: relative;
   max-width: 80%;
   max-height: 250px;
   font-family: 'Montserrat';
-  font-size: 20px;
+
 }
 
 #textohome2
@@ -255,6 +257,57 @@ position: relative;
     stroke-dasharray: 0 100;
   }
 }
+#guapo{
+  width:100%;
+  border-radius: 50%;
+  margin: 80px ;
+  
+
+}
+
+#textome
+{
+  margin: auto;
+
+}
+
+#gamecontroller{
+  -webkit-filter: invert(1);
+   filter: invert(1);
+   width: 20%;
+   float: left;
+
+  padding: 5px;
+}
+#gym{
+  float: left;
+
+  padding: 5px;
+   width: 20%;
+
+}
+
+#overlay {
+    color: rgb(44, 44, 44);
+    position: absolute;
+    z-index:-5;
+    font-size: 800%; 
+    font-weight: 1000;
+    text-align: center;
+    left: 0px;
+    width: 100%;
+
+}
+#movies{
+  -webkit-filter: invert(1);
+   filter: invert(1);
+   margin-top: 3%;
+   width: 15%;
+   float: left;
+
+  padding: 5px;
+}
+
 
 </style>
 </head>
@@ -296,16 +349,43 @@ position: relative;
         
         <div class="square"></div>
         
-        <p class="item-2" style="color:rgb(248, 248, 248)">I am a computer science engineering student <img src= "https://i.imgur.com/68Jpw0b.jpg"  id = "image3" class="img-fluid" alt="Responsive image2" ></p> 
+        <p class="item-2" style="color:rgb(248, 248, 248)">I am a computer science engineering student <br><img src= "https://i.imgur.com/68Jpw0b.jpg"  id = "image3" class="img-fluid" alt="Responsive image2" ></p> 
 </div>
        
 
 </div>
 <div id="home">
+<br>
+    <h3 id= "textohome2" style = "color:rgb(228, 228, 228)">About me</h3>
+  <div class="container">
+      <div class="row">
+      <div class="col-4">
+        <img id="guapo" src="https://i.imgur.com/soz6NNy.jpg" alt="My pic" >
+      </div>
+        <div class="col-4" id="textome" >
+            My name is Juan Manuel Muñoz, i'm 21 years old, i'm currently a computer science student at the University of Andes
+            in my homeland: Bogotá, Colombia.
+        </div>
+      </div>
+  </div>
+    <br>
+    <h3 id= "textohome2" style = "color:rgb(138, 138, 138); font-size: 100%;">My hobbies</h3>
+    <div id='overlay'>
+      hobbies
+    </div>
+    <div style="margin-left: 30%; margin-top: 5%;">
+    <div id='im1' >
+       <img id="gamecontroller" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Video_game_controller_icon_designed_by_Joe_Harrison.svg/800px-Video_game_controller_icon_designed_by_Joe_Harrison.svg.png" class="img-fluid" alt="Responsive image" >
+    </div>
+    <div  id='im1'> 
+      <img id="gym" src= "https://i.imgur.com/owqd1uR.png" class="img-fluid" alt="Responsive image">
+    </div>
+    <div  id='im1'> 
+        <img id="movies" src= "http://cdn.onlinewebfonts.com/svg/img_396961.png" class="img-fluid" alt="Responsive image">
+    </div>
+  </div>
+</div >
 
-
-
-</div>
 <div id="exp" >
   <br>
   <h3 id= "textohome"  style = "color:rgb(80, 80, 80)">WHAT I DO</h3>
